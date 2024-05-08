@@ -5,7 +5,7 @@ const routes = require('./routes');
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect('your-mongodb-connection-string', {
+mongoose.connect('mongodb+srv://tdrodgers23:exQvwprIf9F2hw2C@apple-store-cluster.vs1zmwr.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -22,6 +22,5 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 // server.js
-const routes = require('./routes');
 app.use('/api', routes);
 
