@@ -1,34 +1,26 @@
-// import React from 'react';
-
-// function OrderSummary() {
-//   return (
-//     <div className="container mt-5">
-//       <h2 className="mb-4">Order Summary</h2>
-//       <div className="card">
-//         <div className="card-body">
-//           <h5 className="card-title">Your Order</h5>
-//           <ul className="list-group list-group-flush">
-//             <li className="list-group-item">Product Name: iPhone 13</li>
-//             <li className="list-group-item">Price: $999</li>
-//             <li className="list-group-item">Quantity: 1</li>
-//             <li className="list-group-item">Total: $999</li>
-//           </ul>
-//           <div className="mt-3">
-//             <h5>Total: $999</h5>
-//             <button className="btn btn-primary">Place Order</button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default OrderSummary;
-
-// OrderSummary.js
 import React from 'react';
 
 function OrderSummary({ cart }) {
+  const placeOrder = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/api/orders', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          items: cart.map(item => ({ name: item.name, price: item.price }))
+        })
+      });
+      const data = await response.json();
+      console.log('Order placed:', data);
+      // Optionally, you can reset the cart after placing the order
+      // setCart([]);
+    } catch (error) {
+      console.error('Error placing order:', error);
+    }
+  };
+
   return (
     <div className="container mt-5">
       <h2 className="mb-4">Order Summary</h2>
@@ -42,7 +34,7 @@ function OrderSummary({ cart }) {
           </ul>
           <div className="mt-3">
             <h5>Total: ${cart.reduce((total, item) => total + item.price, 0)}</h5>
-            <button className="btn btn-primary">Place Order</button>
+            <button onClick={placeOrder} className="btn btn-primary">Place Order</button>
           </div>
         </div>
       </div>
