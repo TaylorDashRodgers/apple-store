@@ -1,11 +1,14 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
 
 const app = express();
 
+const uri = process.env.MONGODB_URI;
+
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://tdrodgers23:exQvwprIf9F2hw2C@apple-store-cluster.vs1zmwr.mongodb.net/', {
+mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -18,9 +21,5 @@ app.use(express.json());
 // Routes
 app.use('/api', routes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-// server.js
-app.use('/api', routes);
-
