@@ -3,11 +3,11 @@ const router = express.Router();
 const phonesRouter = require('./phones');
 const computersRouter = require('./computers');
 const accessoriesRouter = require('./accessories');
-const ordersRouter = require('./orders'); // Add this line
+const ordersRouter = require('./orders');
 
 router.use('/phones', phonesRouter);
 router.use('/computers', computersRouter);
 router.use('/accessories', accessoriesRouter);
-router.use('/orders', ordersRouter); // Add this line
+router.use('/orders', ordersRouter); 
 
 module.exports = router;

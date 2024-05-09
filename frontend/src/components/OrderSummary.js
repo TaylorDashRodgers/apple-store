@@ -1,17 +1,13 @@
 import React from 'react';
 
 function OrderSummary({ cart, setCart }) {
-  // Function to place an order
   const placeOrder = async () => {
-    // Ask the user to confirm the order
     const confirmOrder = window.confirm('Do you want to place the order? The order will be saved in our database.');
     if (!confirmOrder) {
-      // If the user does not confirm, exit the function
       return;
     }
 
     try {
-      // Send a POST request to place an order
       const response = await fetch('http://localhost:3001/api/orders', {
         method: 'POST',
         headers: {
@@ -21,7 +17,7 @@ function OrderSummary({ cart, setCart }) {
           products: cart.map((item) => ({
             name: item.name,
             price: item.price,
-            quantity: item.quantity || 1, // Include quantity; default to 1 if not specified
+            quantity: item.quantity || 1,
           })),
           total: cart.reduce(
             (sum, item) => sum + item.price * (item.quantity || 1),
@@ -37,8 +33,6 @@ function OrderSummary({ cart, setCart }) {
       // Reset the cart after placing the order
       setCart([]);
 
-      // Optionally, you can redirect the user or show a success message
-      // window.location.reload(); // This refreshes the page
     } catch (error) {
       console.error('Error placing order:', error);
     }
