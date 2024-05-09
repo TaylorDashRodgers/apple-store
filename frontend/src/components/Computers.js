@@ -16,8 +16,11 @@ function Computers({ setCart }) {
       });
   }, []);
 
-  const addToCart = (computer) => {
-    setCart(prevCart => [...prevCart, computer]);
+  const addToCart = (phone) => {
+    const confirmed = window.confirm(`Add ${phone.name} to cart?`);
+    if (confirmed) {
+      setCart(prevCart => [...prevCart, phone]);
+    }
   };
 
   return (

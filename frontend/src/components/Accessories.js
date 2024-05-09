@@ -16,8 +16,11 @@ function Accessories({ setCart }) {
       });
   }, []);
 
-  const addToCart = (accessory) => {
-    setCart(prevCart => [...prevCart, accessory]);
+  const addToCart = (phone) => {
+    const confirmed = window.confirm(`Add ${phone.name} to cart?`);
+    if (confirmed) {
+      setCart(prevCart => [...prevCart, phone]);
+    }
   };
 
   return (

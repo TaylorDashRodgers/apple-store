@@ -17,7 +17,10 @@ function Phones({ setCart }) {
   }, []);
 
   const addToCart = (phone) => {
-    setCart(prevCart => [...prevCart, phone]);
+    const confirmed = window.confirm(`Add ${phone.name} to cart?`);
+    if (confirmed) {
+      setCart(prevCart => [...prevCart, phone]);
+    }
   };
 
   return (
