@@ -5,3 +5,5 @@ an array of someones order after they placed it. In general it was just really c
 liked to add an admin page where we could view, edit, and delete all orders placed. This would be cool since we already save every order in our database 
 and we could use that to add additional functionality. To conclude we were able to implement everything we pitched in the proposal. It would have been cool
 to complete some extra things for an admin page but it was nice to see that we were able to complete the original project we pitched fully.
+
+<img width="1509" alt="Screenshot 2024-05-13 at 2 20 38 PM" src="https://github.com/TaylorDashRodgers/apple-store/assets/74731025/109e9eb1-51d4-4e4c-a250-a515fcec21b4">
