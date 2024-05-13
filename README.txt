@@ -7,3 +7,7 @@ and we could use that to add additional functionality. To conclude we were able 
 to complete some extra things for an admin page but it was nice to see that we were able to complete the original project we pitched fully.
 
 <img width="1509" alt="Screenshot 2024-05-13 at 2 20 38 PM" src="https://github.com/TaylorDashRodgers/apple-store/assets/74731025/109e9eb1-51d4-4e4c-a250-a515fcec21b4">
+<img width="1509" alt="Screenshot 2024-05-13 at 2 21 20 PM" src="https://github.com/TaylorDashRodgers/apple-store/assets/74731025/2b529460-5b12-472e-ba82-ebf0e3ad719e">
+<img width="1508" alt="Screenshot 2024-05-13 at 2 21 45 PM" src="https://github.com/TaylorDashRodgers/apple-store/assets/74731025/353f033d-7a7a-4060-b979-3e101640d0e4">
+<img width="1506" alt="Screenshot 2024-05-13 at 2 22 10 PM" src="https://github.com/TaylorDashRodgers/apple-store/assets/74731025/a943a4cf-bfcc-4268-8469-9fe215d908ef">
+<img width="1505" alt="Screenshot 2024-05-13 at 2 22 50 PM" src="https://github.com/TaylorDashRodgers/apple-store/assets/74731025/9b90496a-9bb0-4279-b9f6-9561c2385792">
